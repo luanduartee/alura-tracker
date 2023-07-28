@@ -3,35 +3,33 @@
         <span class="icon">
             <i :class="icone"></i>
         </span>
-        <span>{{texto}}</span>
+        <span>{{ texto }}</span>
     </button>
 </template>
 
 <script lang="ts">
-    import { defineComponent } from 'vue';
+import { defineComponent } from 'vue';
 
-    export default defineComponent ({
-        name: "Botao-Name",
-        emits: ['clicado'],
-        props: {
-            desabilitado: {
-                type: Boolean
-            },
-            icone: {
-                type: String,
-                required: true,
-            },
-            texto: {
-                type: String,
-                required: true,
-            }
+export default defineComponent ({
+    name: "Botao-Name",
+    emits: ['clicado'],
+    props: {
+        desabilitado: {
+            type: Boolean
         },
-        methods: {
-            clicado() : void {
-                this.$emit('clicado');
-            }
+        icone: {
+            type: String,
+            required: true
+        },
+        texto: {
+            type: String,
+            required: true
         }
-    })
+    },
+    methods: {
+        clicado () : void {
+            this.$emit('clicado');
+        }
+    }
+})
 </script>
-
-<style></style>
