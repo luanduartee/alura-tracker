@@ -6,6 +6,22 @@
         <button class="button" @click="alterarTema">
             {{ textoBotao }}
         </button>
+        <nav class="panel mt-5">
+            <ul>
+                <li>
+                    <router-link to="/" class="link">
+                        <i class="fas fa-tasks"></i>
+                        tarefas
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/projetos" class="link">
+                        <i class="fas fa-project-diagram"></i>
+                        projetos
+                    </router-link>
+                </li>
+            </ul>
+        </nav>
     </header>
 </template>
   
@@ -15,13 +31,13 @@ import { defineComponent } from 'vue'
 export default defineComponent({
     name: 'BarraLateral',
     emits: ['aoTemaAlterado'],
-    data () {
+    data() {
         return {
             modoEscuroAtivo: false,
         }
     },
     computed: {
-        textoBotao () {
+        textoBotao() {
             if (this.modoEscuroAtivo) {
                 return 'Desativar modo escuro'
             }
@@ -29,7 +45,7 @@ export default defineComponent({
         }
     },
     methods: {
-        alterarTema () {
+        alterarTema() {
             this.modoEscuroAtivo = !this.modoEscuroAtivo
             this.$emit('aoTemaAlterado', this.modoEscuroAtivo)
         }
@@ -52,4 +68,19 @@ header {
         height: auto;
     }
 }
-</style>
+
+.panel li {
+    margin: 8px 0;
+}
+
+.link {
+    color: #fff;
+}
+
+.link:hover {
+    color: #FAF0CA;
+}
+
+.link.router-link-active {
+    color: #FAF0CA;
+}</style>
