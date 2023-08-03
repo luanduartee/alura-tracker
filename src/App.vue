@@ -13,7 +13,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import BarraLateral from './components/BarraLateral.vue';
-import ITarefa from './interfaces/ITarefa';
 import Notificacoes from './components/Notificacoes.vue';
 
 export default defineComponent({
