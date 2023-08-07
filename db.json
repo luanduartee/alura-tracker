@@ -6,7 +6,31 @@
     },
     {
       "id": 2,
-      "nome": "ByteBanko"
+      "nome": "ByteBank 2.0"
+    },
+    {
+      "nome": "Vue Tracker",
+      "id": 3
+    }
+  ],
+  "tarefas": [
+    {
+      "id": 1,
+      "duracaoEmSegundos": 120,
+      "descricao": "Configuração do ambiente",
+      "projeto": {
+        "id": 1,
+        "nome": "Alura Tracker 3.0"
+      }
+    },
+    {
+      "duracaoEmSegundos": 4,
+      "descricao": "Terminar Curso",
+      "projeto": {
+        "nome": "Vue Tracker",
+        "id": 3
+      },
+      "id": 2
     }
   ]
 }
